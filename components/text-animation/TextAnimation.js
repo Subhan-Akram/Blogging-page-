@@ -86,7 +86,7 @@ return (
    
    </div>
    <div>
-      <p className="text_sm mt_2">
+      <p className="text_sm ">
       Sign up now for your free Mastercard debit card and digital wallet.
        Spend, send and withdraw cash without fees.
       </p>

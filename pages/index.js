@@ -14,7 +14,8 @@ function HomePage() {
  <div>
      <div className='container_home bd_red'>
       <Container>
-       <div className='home_hero_secttion bd_red'>
+        <br /> 
+       <div className='home_hero_secttion  bd_red'>
              <div className='hero_left bd_green'>
              <TextAnimation />
              </div>
