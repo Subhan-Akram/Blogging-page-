@@ -45,7 +45,7 @@ export default function CommentForm({
         ) : (
           <button
             type="button"
-            className="nav_link_btn py-2 px-4 rounded bg-blue-600 text-white disabled:opacity-40 hover:bg-blue-700"
+            className="nav_link_btn "
             onClick={() => loginWithPopup()}
           >
             Log In
