@@ -1,4 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react'
+import { AiOutlineSend } from 'react-icons/ai'
 
 type CommentFormProps = {
   text: string
@@ -31,20 +32,20 @@ export default function CommentForm({
       <div className="flex items-center mt-4">
         {isAuthenticated ? (
           <div className="flex items-center space-x-6">
-            <button className="py-2 px-4 rounded bg-blue-600 text-white disabled:opacity-40 hover:bg-blue-700">
-              Send
+            <button className="nav_link_btn send ">
+              <AiOutlineSend />
             </button>
-            <button
+            {/* <button
               className="text-gray-500"
               onClick={() => logout({ returnTo: window.location.origin })}
             >
               Log Out
-            </button>
+            </button> */}
           </div>
         ) : (
           <button
             type="button"
-            className="py-2 px-4 rounded bg-blue-600 text-white disabled:opacity-40 hover:bg-blue-700"
+            className="nav_link_btn py-2 px-4 rounded bg-blue-600 text-white disabled:opacity-40 hover:bg-blue-700"
             onClick={() => loginWithPopup()}
           >
             Log In
