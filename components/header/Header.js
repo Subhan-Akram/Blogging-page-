@@ -54,7 +54,10 @@ const Navbar = () => {
               // onClick={() => {
                 // setActiveIdx(idx);
                 // setNavActive(false);
-                onClick={() =>isAuthenticated? "" : loginWithPopup()}
+                onClick={() =>{
+                  console.log("check click or nt ")
+                  return isAuthenticated? "" : loginWithPopup()
+                }}
               // }}
               key={menu.text}
             
@@ -66,7 +69,8 @@ const Navbar = () => {
         
           ))}
             
-              <div className={`${navActive && size.width<769 ? "showCloseIcon" : "hideIcon"}`}  onClick={() => {
+              <div className={`${navActive && size.width<769 ? "showCloseIcon" : "hideIcon"}`}  
+              onClick={() => {
                 // setActiveIdx(idx);
                 setNavActive(false);
               }} ><IoIosClose /></div>
