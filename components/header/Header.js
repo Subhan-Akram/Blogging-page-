@@ -18,7 +18,7 @@ const Navbar = () => {
 
   ];
   
-  console.log("window size",size)
+
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
 

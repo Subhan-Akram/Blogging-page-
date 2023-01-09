@@ -23,8 +23,8 @@ export default function useComments() {
     console.log(withHyphens); // 👉️ 2022-10-25
     }
   // const { name, picture, email } = user;
-  const redis = new Redis({ url: 'https://apn1-simple-redbird-33593.upstash.io',
-   token: 'AYM5ASQgZTgzYTg4NDAtZjY4NS00MTU2LTgxOTQtNjMwNjY5M2EwYzUyNzU3ZjNmZWVhYzZhNGNlMjllMzQ2MjdmYjAzY2IzYTY=' });
+  const redis = new Redis({ url: 'https://apn1-simple-redbird-33593.upstash.io',token:process.env.NEXT_REDI_TOKEN})
+    
   const { getAccessTokenSilently } = useAuth0()
   const [text, setText] = useState('')
 let [data,setData]=useState("")

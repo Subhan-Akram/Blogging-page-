@@ -7,6 +7,7 @@ import { fetchEntries } from '../api/comment'
 import BlogCards from '../../components/blog-card/BlogCards'
 import c1 from "../../images/c2.jpeg"
 import Image from 'next/image'
+
 export default function NotePage({posts}) {
   console.log("posts>> ",posts)
   return (
@@ -34,7 +35,6 @@ export default function NotePage({posts}) {
         
         ))}
         </div> 
-      
       
     
       

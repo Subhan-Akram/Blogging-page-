@@ -2,7 +2,7 @@
 import React from 'react'
 import { fetchEntries , getSingleBlogPost} from '../api/comment'
 import ReactDOM from 'react-dom';
-
+import Map from "../../components/Map"
 import Comment from '../../components/comment'
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -58,6 +58,7 @@ console.log("featrured",featured)
             <div className=' blog_post'>
   
             {documentToReactComponents(post.content,options)}
+           <div className=' blog_post'> <Map path={post.mapsCoordinates} /></div>
             <Comment />
 
     </div>
