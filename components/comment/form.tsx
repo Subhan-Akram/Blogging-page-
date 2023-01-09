@@ -45,7 +45,7 @@ export default function CommentForm({
         ) : (
           <button
             type="button"
-            className="nav_link_btn "
+            className="nav_link_btn"
             onClick={() => loginWithPopup()}
           >
             Log In

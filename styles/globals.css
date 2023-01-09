@@ -67,7 +67,7 @@ nav{
 .nav_link_btn{
   /* background: linear-gradient(90deg, orange 4.33%, green 100%); */
   border-radius: 15px;
-  background: #ff6c59;
+  background: #ff6c59 !important;
 color: white;
   padding:.4rem 1.3rem;
 }
