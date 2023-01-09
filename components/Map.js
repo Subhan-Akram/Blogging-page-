@@ -21,19 +21,7 @@ import {
 import { useRef, useState } from 'react'
 
 const center = { lat:24.945665738220846, lng:67.04077602354319 }
-// const path=[
-//   {place:"hyderi",
-//   origin:{lat:24.937474641332347, lng:67.04432155237853},
-//   destination:{lat:24.945665738220846, lng:67.04077602354319}
-// },
-//   {place:"Aslam Market",origin:{lat:24.945665738220846, lng:67.04077602354319},
-// destination:{lat:24.946025418810766, lng:67.05026930820114}
-// },
-//   // {place:"hyderi",lat:24.937474641332347, lng:67.04432155237853},
-//   {place:"five star",origin:{lat:24.946025418810766, lng:67.05026930820114}
-// ,destination:{lat:24.956025418810766, lng:67.07026930820114}
-// }
-// ]
+
 function Map({path}) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_GOOGLE_MAPS_API_KEY,
@@ -55,10 +43,7 @@ let [resultArray,setResultArray]=useState([])
   }
 let temp=[]
   async function calculateRoute() {
-  
-    // if (originRef.current.value === '' || destiantionRef.current.value === '') {
-    //   return
-    // }
+
 for(let i=0;i<path.length;i++){
   const directionsService = new google.maps.DirectionsService()
   const results = await directionsService.route({
@@ -66,11 +51,9 @@ for(let i=0;i<path.length;i++){
     destination:path[i].destination,
     travelMode: google.maps.TravelMode.DRIVING,
   })
-  // resultArray=[...results]
+
   temp.push(results)
-  // console.log("results >",results)
-  // console.log("place i > ",path[i].place)
- 
+
 
 }
 setResultArray([...temp])
