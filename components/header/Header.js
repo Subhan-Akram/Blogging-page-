@@ -15,8 +15,7 @@ const Navbar = () => {
   let firstName=user?.name.split(" ")
   const MENU_LIST = [
     { text: `${isAuthenticated? firstName[0] : 'Login'}`},
-    // { text: "About Us", href: "/about" },
-    // { text: "Blogs", href: "/contact" },
+
   ];
   
   console.log("window size",size)
