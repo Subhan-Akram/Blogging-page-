@@ -55,13 +55,19 @@ console.log("featrured",featured)
     return className;
   }
   return (
+   <>
             <div className=' blog_post'>
   
-            {documentToReactComponents(post.content,options)}
-           <div className=' blog_post'> <Map path={post.mapsCoordinates} /></div>
-            <Comment />
+  {documentToReactComponents(post.content,options)}
 
-    </div>
+
+
+</div>
+<div className='map_div bd_red'> <Map path={post.mapsCoordinates} /></div>
+<div className=' blog_post'>
+<Comment />
+</div>
+   </>
   )
 }
 

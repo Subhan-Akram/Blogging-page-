@@ -18,7 +18,7 @@ import {
   Autocomplete,
   DirectionsRenderer,
 } from '@react-google-maps/api'
-import { useRef, useState } from 'react'
+import { useRef, useState ,useEffect} from 'react'
 
 const center = { lat:24.945665738220846, lng:67.04077602354319 }
 
@@ -27,7 +27,14 @@ function Map({path}) {
     googleMapsApiKey: process.env.NEXT_GOOGLE_MAPS_API_KEY,
     libraries: ['places'],
   })
+  useEffect(() => {
+    // console.log("working")
+    
+    if(isLoaded){
+      calculateRoute()
+    }
 
+  }, [isLoaded])
   const [map, setMap] = useState(/** @type google.maps.Map */ (null))
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
@@ -64,6 +71,7 @@ setResultArray([...temp])
   }
   console.log("result array",resultArray)
 
+
   function clearRoute() {
     setDirectionsResponse(null)
     setDistance('')
@@ -73,14 +81,9 @@ setResultArray([...temp])
   }
 
   return (
-    <Flex
-      position='relative'
-      flexDirection='column'
-      alignItems='center'
-      h='100vh'
-      w='100vw'
-    >
-      <Box position='absolute' left={0} top={0} h='100%' w='100%'>
+  
+    <div className='map bd_yellow'>
+     
         {/* Google Map Box */}
         <GoogleMap
           center={center}
@@ -103,17 +106,9 @@ setResultArray([...temp])
           })
           )}
         </GoogleMap>
-      </Box>
-      <Box
-        p={4}
-        borderRadius='lg'
-        m={4}
-        bgColor='white'
-        shadow='base'
-        minW='container.md'
-        zIndex='1'
-      >
-        <HStack spacing={2} justifyContent='space-between'>
+      
+    
+        {/* <HStack spacing={2} justifyContent='space-between'>
           <Box flexGrow={1}>
             <Autocomplete>
               <Input type='text' placeholder='Origin' ref={originRef} />
@@ -152,9 +147,10 @@ setResultArray([...temp])
               map.setZoom(15)
             }}
           />
-        </HStack>
-      </Box>
-    </Flex>
+        </HStack> */}
+ 
+    </div>
+ 
   )
 }
 
