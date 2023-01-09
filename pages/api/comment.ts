@@ -8,9 +8,9 @@ const client = require('contentful').createClient({
 })
 
 export async function fetchEntries() {
-  console.log("entries>>>>>>>>>>>>>>>")
+
   const entries = await client.getEntries()
-   console.log("posts>>",entries)
+ 
   if (entries.items) return entries.items
   console.log(`Error getting Entries for .`)
 }
@@ -30,7 +30,8 @@ export async function getSingleBlogPost(slug) {
       slug: fields.slug,
       content: fields.content,
       description:fields.description,
-      mapsCoordinates:fields.mapsCoordinates
+      mapsCoordinates:fields.mapsCoordinates,
+      allRoutes:fields.allRoutes
     };
   })[0];
 }

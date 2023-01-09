@@ -57,8 +57,9 @@ for(let i=0;i<path.length;i++){
     origin: path[i].origin,
     destination:path[i].destination,
     travelMode: google.maps.TravelMode.DRIVING,
+    
   })
-
+  
   temp.push(results)
 
 
@@ -69,16 +70,16 @@ setResultArray([...temp])
   // setDistance(results.routes[0].legs[0].distance.text)
   // setDuration(results.routes[0].legs[0].duration.text)
   }
-  console.log("result array",resultArray)
+  // console.log("result array",resultArray)
 
 
-  function clearRoute() {
-    setDirectionsResponse(null)
-    setDistance('')
-    setDuration('')
-    originRef.current.value = ''
-    destiantionRef.current.value = ''
-  }
+  // function clearRoute() {
+  //   setDirectionsResponse(null)
+  //   setDistance('')
+  //   setDuration('')
+  //   originRef.current.value = ''
+  //   destiantionRef.current.value = ''
+  // }
 
   return (
   
@@ -97,12 +98,17 @@ setResultArray([...temp])
           }}
           onLoad={map => setMap(map)}
         >
-          <Marker position={center} />
+       {/* {
+        path.map(val=>{
+          return(  <Marker position={val.origin}  />)
+        })
+       } */}
           {resultArray.length>0 && (
-          resultArray.map((val,i)=>{
-            console.log("val direction rendering >>>",i)
-            
-          return(  <DirectionsRenderer directions={val} />)
+          resultArray.map((val,i)=>{    
+          return(  <div>
+            <DirectionsRenderer directions={val} />
+          
+          </div>)
           })
           )}
         </GoogleMap>

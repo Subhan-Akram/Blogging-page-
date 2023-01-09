@@ -65,6 +65,7 @@ console.log("featrured",featured)
 </div>
 <div className='map_div bd_red'> <Map path={post.mapsCoordinates} /></div>
 <div className=' blog_post'>
+{documentToReactComponents(post.allRoutes,options)}
 <Comment />
 </div>
    </>
