@@ -14,9 +14,11 @@ import "../components/blog-card/BlogCards.css"
 import "../styles/Faq.css"
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
+//     NEXT_PUBLIC_AUTH0_CLIENT_ID=y48dDEchZNdjnOUtg9d88HNvGFjQlj6D
+// NEXT_PUBLIC_AUTH0_DOMAIN=dev-gdqob2bstqzlhuwx.us.auth0.com
     <Auth0Provider
-      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
-      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
+      clientId="y48dDEchZNdjnOUtg9d88HNvGFjQlj6D"
+      domain="dev-gdqob2bstqzlhuwx.us.auth0.com"
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
