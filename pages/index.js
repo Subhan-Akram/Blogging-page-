@@ -10,6 +10,8 @@ import ContentSection from '../components/content-section/ContentSection'
 // import bus from "../images/bus4.gif"
 
 function HomePage() {
+
+ 
   return (
  <div>
      <div className='container_home bd_red'>
