@@ -10,7 +10,7 @@ import NavItem from "./NavItem";
 
 const Navbar = () => {
   // Hook
-  const { isAuthenticated,user } = useAuth0()
+  const { isAuthenticated,user ,loginWithPopup} = useAuth0()
   const size = useWindowSize();
   let firstName=user?.name.split(" ")
   const MENU_LIST = [
