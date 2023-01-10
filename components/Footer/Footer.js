@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link'
 // import {IoSend } from "react-icons/Io"
 import {SiFacebook,SiTwitter,SiYoutube} from "react-icons/si"
 import { AiOutlineSend } from 'react-icons/ai'
 
-function Footer() {
+
+function  Footer () {
+  let ref=useRef(null)
+ const emailEnter=async()=>{
+  if(!isEmail(ref.current.value)){
+    return alert("Email is not correct")
+  }
+
+  const result =await fetch("/api/SubscribeUser/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+     email:ref.current.value
+    })
+  });
+  if(result.status==201){
+alert("created")
+  }else{
+    alert(`no cretaed ${result.statusText}`)
+  }
+ } 
+
+ function isEmail(email) {
+  var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  return re.test(email);
+}
+
   return (
     <div className='footer'>
          <div className='footer_col_1 bd_blue'>
@@ -16,8 +42,8 @@ SadaPay Mastercard debit cards issued pursuant to a license by Mastercard Asia/P
          <div className='footer_col_2 bd_green'>
             <h1 className='footer_title'>Registered For Latest News</h1>
            <div className='footer_email'>
-          <input placeholder='Email'></input>
-          <button><AiOutlineSend /></button>
+          <input placeholder='Email' ref={ref}></input>
+          <button><AiOutlineSend onClick={()=>{emailEnter()}} /></button>
            </div>
         
          </div>
