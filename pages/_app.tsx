@@ -12,6 +12,17 @@ import "../components/content-section/ContentSection.css"
 import "../components/Footer/Footer.css"
 import "../components/blog-card/BlogCards.css"
 import "../styles/Faq.css"
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.TOP_CENTER,
+  timeout: 5000,
+  offset: '30px',
+  // you can also just use 'scale'
+  transition: transitions.SCALE
+}
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   
   return (
@@ -20,6 +31,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
 
     >
+      <AlertProvider template={AlertTemplate} {...options}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -34,6 +46,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <main >
         <Component {...pageProps} />
       </main>
+      </AlertProvider>
     </Auth0Provider>
   )
 }

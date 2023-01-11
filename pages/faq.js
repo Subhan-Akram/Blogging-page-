@@ -20,7 +20,7 @@ const config = {
 
 function faq() {
   return (
-    <div className='faq bd_red container_home'>
+    <div className='faq bd_red container_faq'>
        <Faq
                 data={data}
                 styles={styles}

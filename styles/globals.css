@@ -155,6 +155,9 @@ color: white;
   .nav{
     padding: .8rem 1rem;
   }
+  .active{
+    padding-top: 1rem !important;
+  }
 }
 /* .bd_red{
   border:1px solid red

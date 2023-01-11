@@ -85,28 +85,34 @@ export default async (req, res) => {
       email_address: email,
       status: 'subscribed',
     };
-
+   console.log("data>",data)
     const response = await fetch(
       `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`,
 
       {
         body: JSON.stringify(data),
         headers: {
-          Authorization: `apikey ${API_KEY}`,
+          Authorization: `Basic ${API_KEY}`,
           'Content-Type': 'application/json',
         },
         method: 'POST',
       }
     );
   
-    if (response.status >= 400) {
+    if (response.status == 400) {
       return res.status(400).json({
-        error: `There was an error subscribing to the newsletter.
-        Hit me up peter@peterlunch.com and I'll add you the old fashioned way :(.`,
+        error: `Hey , You are already a user :(.`,
+        err:response,
+        data:data,
+        status:response.status
       });
+    }else if(response.status==401){
+      return res.status(401).json({
+        error:"api key invalid"
+      })
     }
 
-    return res.status(201).json({ error: '' });
+    return res.status(201).json({ success: 'user is created' });
   } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() });
   }

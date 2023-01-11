@@ -22,6 +22,12 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
 
+const login=()=>{
+    
+  setNavActive(false)
+  navigat
+  loginWithPopup()
+}
   return (
     <header>
       <nav className={`nav`}>
@@ -39,13 +45,22 @@ const Navbar = () => {
           <div></div>
         </div>
         <div className={`${navActive && size.width<769 ? "active" : ""} nav__menu-list`}>
-              <Link className="nav__link_text" href="/" >
+              <Link className="nav__link_text" href="/"   onClick={() => {
+                // setActiveIdx(idx);
+                setNavActive(false);
+              }} >
                Home 
              </Link>
-             <Link className="nav__link_text" href="/posts" >
+             <Link className="nav__link_text" href="/posts"    onClick={() => {
+                // setActiveIdx(idx);
+                setNavActive(false);
+              }} >
                Blogs
              </Link>
-             <Link className="nav__link_text" href="/faq">
+             <Link className="nav__link_text" href="/faq"   onClick={() => {
+                // setActiveIdx(idx);
+                setNavActive(false);
+              }} >
                FAQ
              </Link>
           {MENU_LIST.map((menu, idx) => (
@@ -55,7 +70,8 @@ const Navbar = () => {
                 // setNavActive(false);
                 onClick={() =>{
                   console.log("check click or nt ")
-                  return isAuthenticated? "" : loginWithPopup()
+                  return isAuthenticated?   setNavActive(false) : login()
+                    
                 }}
               // }}
               key={menu.text}

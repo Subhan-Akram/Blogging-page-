@@ -3,13 +3,14 @@ import Link from 'next/link'
 // import {IoSend } from "react-icons/Io"
 import {SiFacebook,SiTwitter,SiYoutube} from "react-icons/si"
 import { AiOutlineSend } from 'react-icons/ai'
-
+import { useAlert } from "react-alert";
 
 function  Footer () {
+  const alert = useAlert();
   let ref=useRef(null)
  const emailEnter=async()=>{
   if(!isEmail(ref.current.value)){
-    return alert("Email is not correct")
+    return    alert.error("Enter correct email");
   }
 
   const result =await fetch("/api/SubscribeUser/", {
@@ -20,9 +21,11 @@ function  Footer () {
     })
   });
   if(result.status==201){
-alert("created")
+    
+    alert.success("It's ok now!");
   }else{
-    alert(`no cretaed ${result.statusText}`)
+    console.log("resulkt>",result)
+    alert.show("Hey , You are already a user :(.");
   }
  } 
 

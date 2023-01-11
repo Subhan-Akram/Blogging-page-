@@ -3,7 +3,7 @@ import Image from 'next/image'
 import TextAnimation from "../components/text-animation/TextAnimation"
 import Footer from "../components/Footer/Footer"
 import bus from "../images/bus5.jpg"
-
+import Head from 'next/head'
 import c from "../images/c2.jpeg"
 import ContentSection from '../components/content-section/ContentSection'
 
@@ -14,6 +14,12 @@ function HomePage() {
  
   return (
  <div>
+    <Head >
+      <title>My Buses  Routes Application</title>
+   <meta name='description' content='conme to see the buses routes'></meta>
+   <meta property='og:title' content='my buses apploication'></meta>
+   <link rel="icon"></link>
+    </Head>
      <div className='container_home bd_red'>
       <Container>
         <br /> 
