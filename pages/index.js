@@ -50,18 +50,19 @@ function HomePage() {
         />
              </div>
              <div className='hero_left bd_green'>
-               <h1 className='section1_title'>
-We have a different perspective about fees</h1>
-<p className='text_sm mt_2'>SadaPay doesn’t have any costly physical branches like a traditional bank, which lets us pass those savings onto our customers. </p>
+               <h1 className='section1_title'>Are you looking for a specific bus route in Karachi? <br/></h1>
+<p className='text_sm mt_2'>Our blog pages feature an extensive collection of information about the bus system in Karachi, including detailed descriptions of each bus route. </p>
 <ul className='list_points'>
-  <li>Free Mastercard debit card</li>
-  <li>
-No annual fees or minimum deposit
+  <li>To find the bus route you need, simply visit our blog pages and search for the bus name.</li>
+  <li>Once you've found the bus you're looking for, you'll be able to view a chart that provides detailed information about the route, including the bus stops, estimated travel time, and any notable landmarks or points of interest along the way.
 </li>
-<li>Free, instant transfers to any bank or wallet in Pakistan
+<li>Our website provides a map feature that allows you to easily find bus routes in the area you're looking to travel to.
 </li>
-<li>Free cash withdrawals at any ATM in Pakistan</li>
-<li>(3x per month)</li>
+
+<li>
+The map displays all the bus routes in the area, including the Greenline bus and People Bus Service, making it easy to find the best option for your needs.
+
+</li>
 </ul>
              </div>
              

@@ -37,13 +37,11 @@ function  Footer () {
   return (
     <div className='footer'>
          <div className='footer_col_1 bd_blue'>
-            <h1 className='footer_logo'>Buses Finder</h1>
-           <p className='footer_text'>SadaPay is registered as Sadapay Private Limited with the Securities and Exchange Commission of Pakistan (No. 0136598), is regulated by the State Bank of Pakistan, and is a wholly-owned subsidiary of SadaPay Technologies Ltd., registered in the Dubai International Financial Center under commercial fintech license #3263.
-
-SadaPay Mastercard debit cards issued pursuant to a license by Mastercard Asia/Pacific Pte. Ltd.</p>
+            <h1 className='footer_logo'>Marish</h1>
+           <p className='footer_text'>Our website is dedicated to providing comprehensive and accurate information about the bus system in Karachi, specifically aimed at facilitating the navigation of the bus system for its users. We aim to assist our users in their journey by providing detailed descriptions of each bus route, including the Greenline bus and People Bus Service</p>
          </div>
          <div className='footer_col_2 bd_green'>
-            <h1 className='footer_title'>Registered For Latest News</h1>
+            <h1 className='footer_title'>Registered For Latest Updates</h1>
            <div className='footer_email'>
           <input placeholder='Email' ref={ref}></input>
           <button  aria-label="Registered" onClick={()=>{emailEnter()}}><AiOutlineSend  /></button>

@@ -66,7 +66,7 @@ return (
 	<div>
 	  <div className="text_animation">
       
-      <p>Karachi Buses Stops </p>
+      <p>Karachi Buses Routes </p>
       <Typewriter
   options={{
     loop: true,
@@ -77,7 +77,7 @@ return (
 		
 			.pauseFor(1500)
 			.deleteAll()
-      typewriter.typeString('New Way To Get')
+      typewriter.typeString('New Way To Navigate.')
 			.pauseFor(1500)
 			.start();
 		}}
@@ -88,8 +88,7 @@ return (
    </div>
    <div>
       <p className="text_sm ">
-      Sign up now for your free Mastercard debit card and digital wallet.
-       Spend, send and withdraw cash without fees.
+      The bus system in Karachi is a great way to explore the city, and it provides a cost-effective alternative to personal vehicles or taxis. 
       </p>
       <br /> <br />
       <div><button  aria-label="Go To Blogging Page" className="nav_link_btn nav_link_btn_padding "><Link href={"/posts"} to="/posts">Find The Bus</Link></button></div>
