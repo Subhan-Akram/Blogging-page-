@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Header from '../components/header'
 import { Auth0Provider } from '@auth0/auth0-react'
+import { DefaultSeo } from 'next-seo'
 import "../styles/Blog.css"
 import "../styles/globals.css"
 import "../components/header/Header.css"
@@ -19,6 +20,7 @@ const options = {
   position: positions.TOP_CENTER,
   timeout: 5000,
   offset: '30px',
+
   // you can also just use 'scale'
   transition: transitions.SCALE
 }
@@ -31,6 +33,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
 
     >
+   <Head>
+   <meta name="google-site-verification" content="pyZepu5U4bFI9qYJWN7rcmQg_IqCEE-cUxnE8T5kxmY" />
+   </Head>
       <AlertProvider template={AlertTemplate} {...options}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
