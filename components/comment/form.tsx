@@ -32,7 +32,7 @@ export default function CommentForm({
       <div className="flex items-center mt-4">
         {isAuthenticated ? (
           <div className="flex items-center space-x-6">
-            <button className="nav_link_btn send ">
+            <button  aria-label="comment send" className="nav_link_btn send ">
               <AiOutlineSend />
             </button>
             {/* <button
@@ -45,6 +45,7 @@ export default function CommentForm({
         ) : (
           <button
             type="button"
+            aria-label="Login"
             className="nav_link_btn"
             onClick={() => loginWithPopup()}
           >

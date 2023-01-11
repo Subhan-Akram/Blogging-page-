@@ -46,16 +46,16 @@ SadaPay Mastercard debit cards issued pursuant to a license by Mastercard Asia/P
             <h1 className='footer_title'>Registered For Latest News</h1>
            <div className='footer_email'>
           <input placeholder='Email' ref={ref}></input>
-          <button><AiOutlineSend onClick={()=>{emailEnter()}} /></button>
+          <button  aria-label="Registered" onClick={()=>{emailEnter()}}><AiOutlineSend  /></button>
            </div>
         
          </div>
          <div className='footer_col_2'>
             <h1 className='footer_title'>Follow Us</h1>
            <div className='footer_links'>
-           <Link to="/" href={"/"} className="social_icons"><SiFacebook /></Link>
-            <Link to="/" href={"/"} className="social_icons"><SiTwitter /></Link>
-            <Link to="/" href={"/"} className="social_icons"><SiYoutube /></Link>
+           <Link   aria-label="social media pages" href={"/posts"} className="social_icons"><SiFacebook /></Link>
+            <Link  aria-label="social media pages" href={"/posts"} className="social_icons"><SiTwitter /></Link>
+            <Link  aria-label="social media pages"  href={"/posts"} className="social_icons"><SiYoutube /></Link>
            </div>
         
          </div>

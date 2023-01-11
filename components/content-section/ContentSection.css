@@ -100,6 +100,11 @@ margin: auto auto;
   }
 }
 
+@media screen and (max-width:780px){
+  .content_title>h1{
+   margin-top:0 !important;
+  }
+}
 .mt-3{
   margin-top: 3rem ;
 

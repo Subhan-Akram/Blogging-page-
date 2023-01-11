@@ -2,9 +2,9 @@ import Container from '../components/container'
 import Image from 'next/image'
 import TextAnimation from "../components/text-animation/TextAnimation"
 import Footer from "../components/Footer/Footer"
-import bus from "../images/bus5.jpg"
+import bus from "../images/bus5.webp"
 import Head from 'next/head'
-import c from "../images/c2.jpeg"
+import c from "../images/c2.webp"
 import ContentSection from '../components/content-section/ContentSection'
 
 // import bus from "../images/bus4.gif"
@@ -27,11 +27,15 @@ function HomePage() {
              <div className='hero_left bd_green'>
              <TextAnimation />
              </div>
-             <div className='hero_right bd_green'>
+             <div className='hero_right bd_green' 
+           
+             >
              <Image
           src={bus}
           alt="my desk"
-         className='img'
+        width={1000}
+      
+      
         />
              </div>
        </div>
@@ -41,7 +45,8 @@ function HomePage() {
              <Image
           src={c}
           alt="character"
-         className='img'
+        width={1000}
+    
         />
              </div>
              <div className='hero_left bd_green'>

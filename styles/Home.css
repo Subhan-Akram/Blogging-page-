@@ -19,7 +19,7 @@
 
 .hero_right{
   width:52%;
-  height: 100%;
+
 }
 .text_animation{
   font-size: clamp(2rem,3.5vw,2.8rem);

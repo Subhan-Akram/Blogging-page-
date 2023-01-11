@@ -1,15 +1,3 @@
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Flex,
-  HStack,
-  IconButton,
-  Input,
-  SkeletonText,
-  Text,
-} from '@chakra-ui/react'
-import { FaLocationArrow, FaTimes } from 'react-icons/fa'
 
 import {
   useJsApiLoader,
@@ -46,7 +34,7 @@ let [resultArray,setResultArray]=useState([])
   const destiantionRef = useRef()
 
   if (!isLoaded) {
-    return <SkeletonText />
+    return <h1> wait ...</h1>
   }
 let temp=[]
   async function calculateRoute() {

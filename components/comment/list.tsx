@@ -10,7 +10,7 @@ export default function CommentList({ comments, onDelete ,data}) {
 // console.log("comments",data,"user",user?.sub,"name",name)
 useEffect( ()=>{
  let c=comments()
- console.log("c>>",c)
+
 },[])
 
 
@@ -35,23 +35,15 @@ useEffect( ()=>{
               </div>
 
               <div className="flex-grow">
-                <div className="flex space-x-2">
+                <div className="flex text_sm_date space-x-2">
                   <b>{comment?.name}</b>
-                  <time className="text-gray-400">
+                  <time className="text_sm_date" >
                     {comment?.createdAt}
                   </time>
-                  {/* {(isAdmin || isAuthor) && (
-                    <button
-                      className="text-gray-400 hover:text-red-500"
-                      onClick={() => onDelete(comment)}
-                      aria-label="Close"
-                    >
-                      x
-                    </button>
-                  )} */}
+                 
                 </div>
 
-                <div>{comment?.content}</div>
+                <div className='text_sm_date '>{comment?.content}</div>
               </div>
             </div>
           )

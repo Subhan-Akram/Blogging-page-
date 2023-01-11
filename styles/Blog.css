@@ -16,6 +16,9 @@
   height: 100vh !important;
   width: 90%;
 }
+.text_sm_date{
+  font-size: clamp(.6rem,2.5vw,1.2rem);
+}
 @media sceen and (max-width: 767px) {
   .blog_post{
     width: 90%;
@@ -27,11 +30,13 @@
 
 .para_text{
   margin-bottom: 2.5rem;
+  font-size: clamp(1rem,2vw,3rem);
+  text-align: justify;
 }
 .para_title{
   margin-bottom: 1.5rem;
   margin-top: 1rem;
-  font-size: clamp(2rem,4vw,4rem);
+  font-size: clamp(1.5rem,4vw,4rem);
   /* color: #02294E; */
   /* text-align: center; */
   font-weight: 500;
@@ -89,6 +94,7 @@ table{
   
 }
 .table_tr>th>p{
+  text-align: justify;
   margin-bottom: 0 !important;
 }
 .table_tr>td{
@@ -157,4 +163,13 @@ table{
   min-width: 40px;
   /* height:7vh; */
   font-size: 2rem !important;
+}
+
+@media  screen and (max-width:765px){
+  .table_tr>td>p{
+    font-size:clamp(.7rem,2vw,2rem) !important;
+    /* padding:.5rem 1rem; */
+   
+  }
+ 
 }

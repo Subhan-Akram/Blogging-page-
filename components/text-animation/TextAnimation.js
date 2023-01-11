@@ -57,6 +57,7 @@
 
 
 
+import Link from "next/link";
 import React from "react";
 import Typewriter from 'typewriter-effect';
 
@@ -91,7 +92,7 @@ return (
        Spend, send and withdraw cash without fees.
       </p>
       <br /> <br />
-      <div><button className="nav_link_btn nav_link_btn_padding ">Find The Bus</button></div>
+      <div><button  aria-label="Go To Blogging Page" className="nav_link_btn nav_link_btn_padding "><Link href={"/posts"} to="/posts">Find The Bus</Link></button></div>
    </div>
 	
 	</div>
