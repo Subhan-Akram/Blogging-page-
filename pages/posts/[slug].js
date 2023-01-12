@@ -7,6 +7,7 @@ import Comment from '../../components/comment'
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
+import Head from "next/head"
 function posts({post}) {
   console.log(post)
   const options = {
@@ -54,10 +55,25 @@ console.log("featrured",featured)
     //alternate logic for 'odd' | 'even'
     return className;
   }
+
+  console.log("post.metaTags.meta",post.metaTags.meta)
+  let metaName=post.metaTags.metaName
+  let metaProperty=post.metaTags.metaProperty
+  let metaLinks=post.metaTags.metaLinks
+  console.log("meta propert",metaProperty)
   return (
    <>
             <div className=' blog_post'>
-  
+  <Head>
+{
+  metaName.map(val=><meta title={val.name} content={val.content} ></meta>)
+ 
+}
+{ metaProperty.map(val=><meta property={val.property} content={val.content} ></meta>)
+}
+{  metaLinks.map(val=><link rel={val.rel} href={val.href} ></link>)}
+
+  </Head>
   {documentToReactComponents(post.content,options)}
 
 

@@ -15,10 +15,19 @@ function HomePage() {
   return (
  <div>
     <Head >
-      <title>My Buses  Routes Application</title>
-   <meta name='description' content='conme to see the buses routes'></meta>
-   <meta property='og:title' content='my buses apploication'></meta>
-   <link rel="icon"></link>
+    <title>Buses Routes</title>
+<meta name="description" content="Our blog pages feature an extensive collection of information about the bus system in Karachi, including detailed descriptions of each bus route. "/>
+<meta name="keywords" content="karachi buses,karachi bus routes,greenline bus,greenline bus karachi route,people bus service,aewoo sleeper bus karachi to lahore ticket price"/>
+<meta name="robots" content="index, follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="canonical" href="https://blogging-page-psi.vercel.app/"/>
+<meta property="og:title" content="Buses Routes"/>
+<meta property="og:description" content="Our blog pages feature an extensive collection of information about the bus system in Karachi, including detailed descriptions of each bus route. "/>
+<meta property="og:image" content="../images/c2.webp"/>
+<meta property="og:url" content="https://blogging-page-psi.vercel.app/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-01T12:00:00+00:00" />
+<meta property="article:author" content="subhan akram"></meta>
     </Head>
      <div className='container_home bd_red'>
       <Container>

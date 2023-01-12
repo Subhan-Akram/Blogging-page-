@@ -31,7 +31,8 @@ export async function getSingleBlogPost(slug) {
       content: fields.content,
       description:fields.description,
       mapsCoordinates:fields.mapsCoordinates,
-      allRoutes:fields.allRoutes
+      allRoutes:fields.allRoutes,
+      metaTags:fields.metatags
     };
   })[0];
 }
