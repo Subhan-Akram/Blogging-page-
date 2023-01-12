@@ -83,11 +83,7 @@ margin: auto auto;
   box-shadow: 0px 4px 6px 0px rgb(12 0 46 / 6%);
 }
 @media screen and (max-width: 428px) {
-  .content_section{
-    /* padding-top: 1rem ; */
-    height: 50vh;
-    
-  }
+ 
   .content_text{
     width: 100%;
     text-align: center;
@@ -110,9 +106,22 @@ margin: auto auto;
     /* padding-top: 1rem !important; */
     padding:.7rem;
   }
+  .content_section{
+    height: auto;
+  }
+  .mt_negative{
+    margin-top: -10rem !important;
+  }
 }
 
 @media screen and (max-width:780px){
+  .content_section{
+    /* padding-top: 1rem ; */
+    height: 40vh;
+    /* margin-top: 0; */
+    /* padding:0; */
+    
+  }
   .content_title>h1{
    margin-top:-1rem !important;
 
@@ -121,8 +130,7 @@ margin: auto auto;
     margin-top: 0;
   }
   .content_section{
-    margin-top: 0;
-    padding:0;
+
   
   }
 }
