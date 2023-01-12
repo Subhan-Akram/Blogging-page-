@@ -25,7 +25,7 @@ const Navbar = () => {
 const login=()=>{
     
   setNavActive(false)
-  navigat
+
   loginWithPopup()
 }
   return (
