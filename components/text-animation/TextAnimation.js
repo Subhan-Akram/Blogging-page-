@@ -91,7 +91,7 @@ return (
       The bus system in Karachi is a great way to explore the city, and it provides a cost-effective alternative to personal vehicles or taxis. 
       </p>
       <br /> <br />
-      <div><button  aria-label="Go To Blogging Page" className="nav_link_btn nav_link_btn_padding "><Link href={"/posts"} to="/posts">Find The Bus</Link></button></div>
+      <div><button  aria-label="Go To Blogging Page" className="nav_link_btn nav_link_btn_padding "><Link href={"/blogs"} to="/blogs">Find The Bus</Link></button></div>
    </div>
 	
 	</div>

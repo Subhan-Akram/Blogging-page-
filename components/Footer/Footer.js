@@ -52,9 +52,9 @@ function  Footer () {
          <div className='footer_col_2'>
             <h1 className='footer_title'>Follow Us</h1>
            <div className='footer_links'>
-           <Link   aria-label="social media pages" href={"/posts"} className="social_icons"><SiFacebook /></Link>
-            <Link  aria-label="social media pages" href={"/posts"} className="social_icons"><SiTwitter /></Link>
-            <Link  aria-label="social media pages"  href={"/posts"} className="social_icons"><SiYoutube /></Link>
+           <Link   aria-label="social media pages" href={"/blogs"} className="social_icons"><SiFacebook /></Link>
+            <Link  aria-label="social media pages" href={"/blogs"} className="social_icons"><SiTwitter /></Link>
+            <Link  aria-label="social media pages"  href={"/blogs"} className="social_icons"><SiYoutube /></Link>
            </div>
         
          </div>

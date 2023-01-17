@@ -51,7 +51,7 @@ const login=()=>{
               }} >
                Home 
              </Link>
-             <Link className="nav__link_text" href="/posts"    onClick={() => {
+             <Link className="nav__link_text" href="/blogs"    onClick={() => {
                 // setActiveIdx(idx);
                 setNavActive(false);
               }} >
