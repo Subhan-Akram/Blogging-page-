@@ -14,7 +14,6 @@ import "../components/Footer/Footer.css"
 import "../components/blog-card/BlogCards.css"
 import "../styles/Faq.css"
 
-import SEO from '../next-seo.config';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 const options = {
@@ -35,8 +34,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
 
     >
-      <DefaultSeo {...SEO} />
-
+    
       
    <Head>
    <meta name="google-site-verification" content="pyZepu5U4bFI9qYJWN7rcmQg_IqCEE-cUxnE8T5kxmY" />
