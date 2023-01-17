@@ -23,6 +23,7 @@ function  Footer () {
   if(result.status==201){
     
     alert.success("It's ok now!");
+    ref.current.value=""
   }else{
     console.log("resulkt>",result)
     alert.show("Hey , You are already a user :(.");

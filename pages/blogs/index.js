@@ -1,28 +1,31 @@
-import React from 'react'
-import Faq from "react-faq-component";
-import data from "../lib/faq.json"
+import Reacr,{useState,useEffect, useRef} from "react"
+import Link from 'next/link'
+import Container from '../../components/container'
+import { fetchEntries } from '../api/comment'
+import BlogCards from '../../components/blog-card/BlogCards'
+import { FaRocket } from 'react-icons/fa'
 import Head from 'next/head'
-const styles = {
-    // bgColor: 'white',
-    titleTextColor:"#2c2c51",
-    
-    rowTitleColor: "#2c2c51",
-    rowContentColor: '#677294;',
-    // arrowColor: "red",
-    titleText:"100px"
-};
+export default function NotePage({posts}) {
+  let ref=useRef(null)
+  const [filterPost,setFilterPost]=useState([])
+  useEffect(()=>{
+    setFilterPost(posts)
+  },[])
 
-const config = {
-    animate: true,
-    // arrowIcon: "V",
-    tabFocus: true
-};
 
-function faq() {
+  const filterBlogs=(s)=>{
+    let inputValue=ref?.current.value.toLowerCase()
+
+if(inputValue == ""){
+     return  setFilterPost(posts)
+}
+const filteredItems = posts.filter(item => item.title.toLowerCase().includes(inputValue));
+setFilterPost(filteredItems);
+  }
   return (
-    <div className='faq bd_red container_faq'>
-        <Head >
-    <title>Buses Routes/ Faq</title>
+    <Container>
+            <Head >
+    <title>Buses Routes/ Blogs</title>
 <meta name="robots" content="index, follow"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="canonical" href="https://blogging-page-psi.vercel.app/"/>
@@ -43,13 +46,54 @@ function faq() {
     <meta property="twitter:url" content="https://blogging-page-psi.vercel.app/" />
 
     </Head>
-       <Faq
-                data={data}
-                styles={styles}
-                config={config}
-            />
-    </div>
+  <div className='container_home bd_red'>
+  
+
+       <div className='blog_search bd_red'>
+         <input ref={ref} className='bd_yellow' placeholder='search' onChange={()=>{filterBlogs()}}></input>
+         <button  aria-label="Search Buses" className='bd_blue search_icon' onClick={()=>{filterBlogs("f")}}><FaRocket /></button>
+       </div>
+
+         <div className='blog_cards bd_red'>
+      {filterPost.map((post) => (
+          // <article key={post.title} className="mb-10">
+            <Link
+              as={`/blogs/${post.slug}`}
+              href="/blogs/[slug]"
+              className="blog_link bd_yellow text-lg leading-6 font-bold"
+            >
+                
+                        <BlogCards data={post} />
+   
+                 
+             </Link>
+         
+          // </article>
+        
+        ))}
+        </div> 
+      
+    
+      
+    
+      </div>
+
+    </Container>
   )
 }
 
-export default faq
+
+
+export async function getStaticProps() {
+  const res = await fetchEntries()
+  const posts = await res.map((p) => {
+    console.log(p)
+    return p.fields
+  })
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}

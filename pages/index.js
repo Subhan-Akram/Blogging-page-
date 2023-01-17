@@ -16,18 +16,25 @@ function HomePage() {
  <div>
     <Head >
     <title>Buses Routes</title>
-<meta name="description" content="Our blog pages feature an extensive collection of information about the bus system in Karachi, including detailed descriptions of each bus route. "/>
-<meta name="keywords" content="karachi buses,karachi bus routes,greenline bus,greenline bus karachi route,people bus service,aewoo sleeper bus karachi to lahore ticket price"/>
 <meta name="robots" content="index, follow"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="canonical" href="https://blogging-page-psi.vercel.app/"/>
-<meta property="og:title" content="Buses Routes"/>
-<meta property="og:description" content="Our blog pages feature an extensive collection of information about the bus system in Karachi, including detailed descriptions of each bus route. "/>
-<meta property="og:image" content="../images/c2.webp"/>
-<meta property="og:url" content="https://blogging-page-psi.vercel.app/" />
-<meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-01-01T12:00:00+00:00" />
 <meta property="article:author" content="subhan akram"></meta>
+    <meta name="title" content="Bus System in Karachi - Detailed Bus Route Information and Map Feature" />
+    <meta name="description" 
+  content="Our website provides a one-stop-shop for information on the bus system in Karachi, including detailed descriptions of each bus route, a map feature to easily locate bus routes, fare information, schedule and reviews of bus services, and a comparison chart to help users decide on their preferred option." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.ctfassets.net/wus7u7nserin/3VaFfNShN9q4XKE4dEVpej/38ee95142ba3fe1223973d13f0d6a68e/c2.jpeg?h=250" />
+    <meta property="og:url" content="https://blogging-page-psi.vercel.app/" />
+    <meta property="og:description" content="Our website provides a one-stop-shop for information on the bus system in Karachi, including detailed descriptions of each bus route, a map feature to easily locate bus routes, fare information, schedule and reviews of bus services, and a comparison chart to help users decide on their preferred option." />
+    <meta property="og:title" content="Bus System in Karachi - Detailed Bus Route Information and Map Feature" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Bus System in Karachi - Detailed Bus Route Information and Map Feature" />
+    <meta property="twitter:description" content="Our website provides a one-stop-shop for information on the bus system in Karachi, including detailed descriptions of each bus route, a map feature to easily locate bus routes, fare information, schedule and reviews of bus services, and a comparison chart to help users decide on their preferred option." />
+    <meta property="twitter:image" content="https://images.ctfassets.net/wus7u7nserin/3VaFfNShN9q4XKE4dEVpej/38ee95142ba3fe1223973d13f0d6a68e/c2.jpeg?h=250" />
+    <meta property="twitter:url" content="https://blogging-page-psi.vercel.app/" />
+
     </Head>
      <div className='container_home bd_red'>
       <Container>
