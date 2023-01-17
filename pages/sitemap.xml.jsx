@@ -1,25 +1,12 @@
 import React from 'react';
 import { fetchEntries } from './api/comment';
-import * as fs from 'fs'
 const Sitemap = () => {
     return null;
 };
 
 export const getServerSideProps = async ({ res }) => {
     const BASE_URL = 'https://blogging-page-psi.vercel.app'; //This is where you will define your base url. You can also use the default dev url http://localhost:3000
-    const staticPaths = fs.readdirSync("pages")
-    .filter((staticPage) => {
-      return ![
-        "sitemap.xml.js",
-        "404.js",
-        "_app.js",
-        "_document.js",
-        "api"
-      ].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-    return `${BASE_URL}/${staticPagePath.replace('.js', '')}`;
-    });
+   
     
    
     const blogs = await fetchEntries() 
@@ -28,8 +15,8 @@ export const getServerSideProps = async ({ res }) => {
       return `${BASE_URL}/blogs/${singleBlog.fields.slug}`
       
     })
-    const allPaths = [...staticPaths, ...dynamicPaths];
-
+    const allPaths = [`${BASE_URL}/faq.js`,`${BASE_URL}/blogs.js`, ...dynamicPaths];
+ // <lastmod>${new Date().toISOString()}</lastmod>
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
@@ -38,7 +25,7 @@ export const getServerSideProps = async ({ res }) => {
           return `
             <url>
               <loc>${url}</loc>
-              <lastmod>${new Date().toISOString()}</lastmod>
+             
             </url>
           `;
         })
