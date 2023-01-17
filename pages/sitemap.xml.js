@@ -1,7 +1,7 @@
 import React from 'react';
 import { fetchEntries } from './api/comment';
 const Sitemap = () => {
-    return null;
+
 };
 
 export const getServerSideProps = async ({ res }) => {
